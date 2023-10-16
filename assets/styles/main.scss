@@ -1,0 +1,10 @@
+// Import Bootstrap 4 Library
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// style
+@import "fonts";
+@import "navbar";
+// pages
+@import "pages/home";
+// components
+@import "components/card";
+@import "components/card_list";

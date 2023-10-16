@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bandheld.de</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+</head>
+
+<body>
+    <div class="page-dashboard">
+        <div class="d-flex" data-aos="fade-right" id="wrapper">
+            <!-- sidebar -->
+            <div class="border-right" id="sidebar-wrapper">
+                <div class="sidebar-heading text-center">
+                    <h1>Bandheld<span>.de</span></h1>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="/index.html" class="list-group-item list-group-item-action">
+                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.00254 15.9987V10.9987H12.0025V15.9987C12.0025 16.5487 12.4525 16.9988 13.0025 16.9988H16.0025C16.5525 16.9988 17.0025 16.5487 17.0025 15.9987V8.99875H18.7025C19.1625 8.99875 19.3825 8.42875 19.0325 8.12875L10.6725 0.59875C10.2925 0.25875 9.71254 0.25875 9.33254 0.59875L0.972539 8.12875C0.632539 8.42875 0.842539 8.99875 1.30254 8.99875H3.00254V15.9987C3.00254 16.5487 3.45254 16.9988 4.00254 16.9988H7.00254C7.55254 16.9988 8.00254 16.5487 8.00254 15.9987Z"
+                                fill="#C5CBD4" />
+                        </svg>
+                        <span>Ubersicht</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 8C10.21 8 12 6.21 12 4C12 1.79 10.21 0 8 0C5.79 0 4 1.79 4 4C4 6.21 5.79 8 8 8ZM8 10C5.33 10 0 11.34 0 14V15C0 15.55 0.45 16 1 16H15C15.55 16 16 15.55 16 15V14C16 11.34 10.67 10 8 10Z"
+                                fill="#718096" fill-opacity="0.41" />
+                        </svg>
+                        <span>Bandverwaltung</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 10H7C7.55 10 8 9.55 8 9V1C8 0.45 7.55 0 7 0H1C0.45 0 0 0.45 0 1V9C0 9.55 0.45 10 1 10ZM1 18H7C7.55 18 8 17.55 8 17V13C8 12.45 7.55 12 7 12H1C0.45 12 0 12.45 0 13V17C0 17.55 0.45 18 1 18ZM11 18H17C17.55 18 18 17.55 18 17V9C18 8.45 17.55 8 17 8H11C10.45 8 10 8.45 10 9V17C10 17.55 10.45 18 11 18ZM10 1V5C10 5.55 10.45 6 11 6H17C17.55 6 18 5.55 18 5V1C18 0.45 17.55 0 17 0H11C10.45 0 10 0.45 10 1Z"
+                                fill="#718096" fill-opacity="0.411765" />
+                        </svg>
+                        <span>Songverwaltung</span>
+                    </a>
+                </div>
+            </div>
+            <!-- end sidebar -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top" data-aos="fade-down">
+                    <div class="container-fluid">
+                        <button class="btn btn-secondary d-md-none me-auto me-2" id="menu-toggle">
+                            &laquo; Menu
+                        </button>
+                        <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <!-- Desktop Menu -->
+                            <ul class="navbar-nav d-none d-lg-flex ms-auto bg-white">
+                                <li class="nav-item">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <img src="./assets/images/icons/search.svg" alt="">
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Search"
+                                            aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link d-inline-block">
+                                        <img src="./assets/images/icons/bell.svg" alt="">
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link d-inline-block">
+                                        <img src="./assets/images/icons/theme.svg" alt="">
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link d-inline-block">
+                                        <img src="./assets/images/icons/info.svg" alt="">
+                                    </a>
+                                </li>
+
+                                <li class="nav-item dropstart">
+                                    <a href="#" class="nav-link" id="navbarDropdown" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="./assets/images/profile.png" alt="" srcset=""
+                                            class="rounded-circle profile-picture" />
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item">Settings</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="/" class="dropdown-item">Logout</a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- Mobile Menu -->
+                            <div class="navbar-nav d-block d-md-none">
+                                <li class="nav-item mt-5">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <img src="./assets/images/icons/search.svg" alt="">
+                                        </span>
+                                        <input type="text" class="form-control p-3" placeholder="Search"
+                                            aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                </li>
+
+                                <div class="d-flex justify-content-between align-items-center my-3">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-inline-block">
+                                            <img src="./assets/images/icons/bell.svg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-inline-block">
+                                            <img src="./assets/images/icons/theme.svg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-inline-block">
+                                            <img src="./assets/images/icons/info.svg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <img src="./assets/images/profile.png" alt="" srcset=""
+                                            class="rounded-circle profile-picture" />
+                                    </li>
+                                </div>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link d-inline-block">
+                                        Settings
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link d-inline-block">
+                                        Logout
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Section Content -->
+                <div class="section-content section-dashboard-home" data-aos="fade-up">
+                    <div class="container-fluid">
+                        <div class="dashboard-heading">
+                            <h2 class="dashboard-title">Songverwaltung</h2>
+                            <p class="dashboard-subtitle"></p>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="row head">
+                                <div class="col-md-6 left">
+                                    <p>
+                                        This is some text description about this page. This is going to be <br> some
+                                        text description about this page.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 right">
+                                    <button class="left">
+                                        <img src="./assets/images/icons/music-filled.svg" alt="">
+                                        <span>Song Hinzufugen</span>
+                                    </button>
+                                    <button class="right">
+                                        <img src="./assets/images/icons/play.svg" alt="">
+                                        <span>Song aus Vorlage anglegen</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 table-content">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped rounded">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <span>Titel</span>
+                                                        <img src="./assets/images/icons/sort.svg" alt="">
+                                                    </th>
+                                                    <th>Dauer</th>
+                                                    <th>
+                                                        <span>Status</span>
+                                                        <img src="./assets/images/icons/sort.svg" alt="">
+                                                    </th>
+                                                    <th class="text-center">Kopieren</th>
+                                                    <th class="text-center">Verteilung</th>
+                                                    <th class="text-center">Komponisten</th>
+                                                    <th class="text-center">Texter</th>
+                                                    <th class="text-center">Song Editerien</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>No one around me</td>
+                                                    <td>2:41</td>
+                                                    <td>Erfolgreich Eingereicht</td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/copy.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/currency.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/music.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/paper.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/pen.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>No one around me</td>
+                                                    <td>2:41</td>
+                                                    <td>Erfolgreich Eingereicht</td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/copy.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/currency.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/music.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/paper.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/pen.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>No one around me</td>
+                                                    <td>2:41</td>
+                                                    <td>Erfolgreich Eingereicht</td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/copy.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/currency.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/music.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/paper.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/pen.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>No one around me</td>
+                                                    <td>2:41</td>
+                                                    <td>Erfolgreich Eingereicht</td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/copy.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/currency.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/music.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/paper.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/pen.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>No one around me</td>
+                                                    <td>2:41</td>
+                                                    <td>Erfolgreich Eingereicht</td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/copy.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/currency.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/music.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/paper.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/pen.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>No one around me</td>
+                                                    <td>2:41</td>
+                                                    <td>Erfolgreich Eingereicht</td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/copy.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/currency.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/music.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/paper.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/pen.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>No one around me</td>
+                                                    <td>2:41</td>
+                                                    <td>Erfolgreich Eingereicht</td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/copy.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/currency.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/music.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/paper.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td style="cursor: pointer;">
+                                                        <div class="d-flex justify-content-center">
+                                                            <img src="./assets/images/icons/pen.svg" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+
+</html>
