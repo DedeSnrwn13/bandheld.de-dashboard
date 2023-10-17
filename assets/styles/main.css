@@ -12250,6 +12250,125 @@ textarea.form-control-lg {
   line-height: 30px;
 }
 
+.modal {
+  --bs-modal-border-radius: 20px;
+  --bs-modal-border-color: transparent;
+}
+.modal .modal-header {
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-bottom: none;
+}
+.modal .modal-header .modal-title {
+  color: #000;
+  font-family: DM Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -0.48px;
+}
+.modal .modal-body {
+  padding-top: 12px;
+  padding-bottom: 33px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.modal .modal-body p {
+  color: #272727;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+.modal .modal-body form h6, .modal .modal-body form .h6 {
+  color: #000;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.modal .modal-body form .row .form-control {
+  border-radius: 90px;
+  background: #F4F7FE;
+  padding: 10px 20px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.modal .modal-body form .row .form-control::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.modal .modal-body form .row .form-control::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.modal .modal-body form .row .form-control:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+.modal .modal-body form .row:nth-child(2), .modal .modal-body form .row:nth-child(3), .modal .modal-body form .row:nth-child(4), .modal .modal-body form .row:nth-child(5) {
+  margin-bottom: 12px;
+}
+.modal .modal-body form .row:nth-child(6) {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  color: #F00;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.modal .modal-body form .row:nth-child(6) span {
+  margin-left: 6px;
+}
+.modal .modal-body form .row:last-child {
+  margin-top: 12px;
+}
+.modal .modal-body form .row .form-check-input {
+  padding: 4px;
+  width: 19px;
+  height: 19px;
+  border-radius: 4px;
+  border: 1px solid #EAF1FF;
+  background-color: #F4F7FE;
+  margin-right: 6px;
+}
+.modal .modal-body form .row .form-check-input:checked {
+  border: 1px solid #2C73FD;
+  background-color: #2C73FD;
+}
+.modal .modal-body form .row .form-check-input:focus {
+  box-shadow: none;
+}
+.modal .modal-footer {
+  border-top: none;
+}
+.modal .modal-footer button {
+  padding: 12px 22px;
+  font-family: DM Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 90px;
+}
+.modal .modal-footer .btn-cancel {
+  color: #000;
+  background: #F2F2F2;
+}
+.modal .modal-footer .btn-confirm {
+  color: #fff;
+  background: #2C73FD;
+}
+
 @media (max-width: 991.98px) {
   .page-dashboard .navbar-store {
     padding-top: 20px;

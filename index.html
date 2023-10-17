@@ -228,7 +228,8 @@
                                                         </div>
                                                     </td>
                                                     <td style="cursor: pointer;">
-                                                        <div class="d-flex justify-content-center">
+                                                        <div class="d-flex justify-content-center"
+                                                            data-bs-toggle="modal" data-bs-target="#editModal">
                                                             <img src="./assets/images/icons/pen.svg" alt="">
                                                         </div>
                                                     </td>
@@ -419,6 +420,100 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Edit -->
+    <div class="modal fade show" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true"
+        style="display: block;">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Person Editieren</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is some text description about this page. This is going to be some text description
+                            about this page.</p>
+
+                        <form action="" class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col">
+                                    <h6>Daten</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Vorname" aria-label="Vorname">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Nachname"
+                                        aria-label="Nachname" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Email ID"
+                                        aria-label="Email ID">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Strabe und Hausnummer"
+                                        aria-label="Strabe und Hausnummer">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Postleitzahl"
+                                        aria-label="Postleitzahl">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Wohnort" aria-label="Wohnort">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Gema Nummer"
+                                        aria-label="Gema Nummer">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="./assets/images/icons/alert-danger.svg" alt="">
+                                    <span>This is some alert status</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h6>Funktionen</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">Bandmitglied</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                            value="option2" checked>
+                                        <label class="form-check-label" for="inlineCheckbox2">Komponist</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
+                                            value="option3" checked>
+                                        <label class="form-check-label" for="inlineCheckbox3">Texter</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-confirm">Speichern</button>
                     </div>
                 </div>
             </div>
