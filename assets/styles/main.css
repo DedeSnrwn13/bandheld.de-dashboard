@@ -12293,7 +12293,7 @@ textarea.form-control-lg {
 }
 .modal .modal-body form .row .form-control {
   border-radius: 90px;
-  background: #F4F7FE;
+  background: #f4f7fe;
   padding: 10px 20px;
   color: rgba(0, 0, 0, 0.6);
   font-family: DM Sans;
@@ -12319,7 +12319,7 @@ textarea.form-control-lg {
   margin-bottom: 18px;
   display: flex;
   align-items: center;
-  color: #F00;
+  color: #f00;
   font-family: DM Sans;
   font-size: 12px;
   font-style: normal;
@@ -12337,13 +12337,13 @@ textarea.form-control-lg {
   width: 19px;
   height: 19px;
   border-radius: 4px;
-  border: 1px solid #EAF1FF;
-  background-color: #F4F7FE;
+  border: 1px solid #eaf1ff;
+  background-color: #f4f7fe;
   margin-right: 6px;
 }
 .modal .modal-body form .row .form-check-input:checked {
-  border: 1px solid #2C73FD;
-  background-color: #2C73FD;
+  border: 1px solid #2c73fd;
+  background-color: #2c73fd;
 }
 .modal .modal-body form .row .form-check-input:focus {
   box-shadow: none;
@@ -12362,13 +12362,50 @@ textarea.form-control-lg {
 }
 .modal .modal-footer .btn-cancel {
   color: #000;
-  background: #F2F2F2;
+  background: #f2f2f2;
 }
 .modal .modal-footer .btn-confirm {
   color: #fff;
-  background: #2C73FD;
+  background: #2c73fd;
 }
 
+@media (max-width: 575.98px) {
+  .modal .modal-header .modal-title {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .modal .modal-body p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .modal .modal-body form h6, .modal .modal-body form .h6 {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .modal .modal-body form .row .form-control {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .modal .modal-body form .row:nth-child(6) {
+    line-height: 24px;
+  }
+  .modal .modal-body form .row .form-check-input {
+    width: 15px;
+    height: 15px;
+    font-size: 13px;
+  }
+  .modal .modal-body form .row .form-check-label {
+    font-size: 13px;
+  }
+  .modal .modal-body form .row:nth-child(2) div:last-child, .modal .modal-body form .row:nth-child(3) div:last-child, .modal .modal-body form .row:nth-child(4) div:last-child {
+    margin-top: 12px;
+  }
+  .modal .modal-footer button {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 @media (max-width: 991.98px) {
   .page-dashboard .navbar-store {
     padding-top: 20px;

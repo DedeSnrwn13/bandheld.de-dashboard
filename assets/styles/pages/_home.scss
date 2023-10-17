@@ -145,12 +145,12 @@
             margin-left: 0;
             margin-top: 0px;
         }
-    
+
         #page-content-wrapper {
             min-width: 0;
             width: 100%;
         }
-    
+
         #wrapper {
             &.toggled {
                 #sidebar-wrapper {
@@ -171,7 +171,7 @@
         @include media-breakpoint-up(md) {
             margin-top: 20px;
             margin-left: 20px;
-        } 
+        }
 
         h5 {
             font-family: Poppins;
@@ -350,19 +350,19 @@
             .row {
                 .form-control {
                     border-radius: 90px;
-                    background: #F4F7FE;
+                    background: #f4f7fe;
                     padding: 10px 20px;
-                    color: rgba(0, 0, 0, 0.60);
+                    color: rgba(0, 0, 0, 0.6);
                     font-family: DM Sans;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 30px;
-    
+
                     &::placeholder {
-                        color: rgba(0, 0, 0, 0.60);
+                        color: rgba(0, 0, 0, 0.6);
                     }
-    
+
                     &:focus {
                         border-color: transparent;
                         box-shadow: none;
@@ -380,7 +380,7 @@
                     margin-bottom: 18px;
                     display: flex;
                     align-items: center;
-                    color: #F00;
+                    color: #f00;
                     font-family: DM Sans;
                     font-size: 12px;
                     font-style: normal;
@@ -401,13 +401,13 @@
                     width: 19px;
                     height: 19px;
                     border-radius: 4px;
-                    border: 1px solid #EAF1FF;
-                    background-color: #F4F7FE;
+                    border: 1px solid #eaf1ff;
+                    background-color: #f4f7fe;
                     margin-right: 6px;
 
                     &:checked {
-                        border: 1px solid #2C73FD;
-                        background-color: #2C73FD;
+                        border: 1px solid #2c73fd;
+                        background-color: #2c73fd;
                     }
 
                     &:focus {
@@ -430,15 +430,79 @@
             line-height: 24px;
             border-radius: 90px;
         }
-        
+
         .btn-cancel {
             color: #000;
-            background: #F2F2F2;
+            background: #f2f2f2;
         }
 
         .btn-confirm {
             color: #fff;
-            background: #2C73FD;
+            background: #2c73fd;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .modal {
+        .modal-header {
+            .modal-title {
+                font-size: 22px;
+                line-height: 32px;
+            }
+        }
+
+        .modal-body {
+            p {
+                font-size: 13px;
+                line-height: 22px;
+            }
+
+            form {
+                h6 {
+                    font-size: 15px;
+                    line-height: 24px;
+                }
+
+                .row {
+                    .form-control {
+                        font-size: 13px;
+                        line-height: 24px;
+                    }
+
+                    &:nth-child(6) {
+                        line-height: 24px;
+                    }
+
+                    .form-check-input {
+                        width: 15px;
+                        height: 15px;
+                        font-size: 13px;
+                    }
+
+                    .form-check-label {
+                        font-size: 13px;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        div {
+                            &:last-child {
+                                margin-top: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .modal-footer {
+            button {
+                padding: 10px 20px;
+                font-size: 14px;
+                line-height: 20px;
+            }
         }
     }
 }
@@ -549,9 +613,6 @@
         }
     }
 }
-
-// @include media-breakpoint-down(lg) {
-// }
 
 // @include media-breakpoint-down(xl) {
 // }

@@ -427,8 +427,9 @@
     </div>
 
     <!-- Modal Edit -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
+    <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -445,35 +446,37 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Vorname" aria-label="Vorname">
+                                <div class="col-12 col-sm-12 col-md-6">
+                                    <input type="text" class="form-control star" placeholder="Vorname *"
+                                        aria-label="Vorname">
                                 </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Nachname"
+                                <div class="col-12 col-sm-12 col-md-6">
+                                    <input type="text" class="form-control star" placeholder="Nachname *"
                                         aria-label="Nachname" required>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Email ID"
+                                <div class="col-12 col-sm-12 col-md-6">
+                                    <input type="text" class="form-control star" placeholder="Email ID *"
                                         aria-label="Email ID">
                                 </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Strabe und Hausnummer"
+                                <div class="col-12 col-sm-12 col-md-6">
+                                    <input type="text" class="form-control star" placeholder="Strabe und Hausnummer *"
                                         aria-label="Strabe und Hausnummer">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Postleitzahl"
+                                <div class="col-12 col-sm-12 col-md-6">
+                                    <input type="text" class="form-control star" placeholder="Postleitzahl *"
                                         aria-label="Postleitzahl">
                                 </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Wohnort" aria-label="Wohnort">
+                                <div class="col-12 col-sm-12 col-md-6">
+                                    <input type="text" class="form-control star" placeholder="Wohnort *"
+                                        aria-label="Wohnort">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col">
+                                <div class="col-12 col-sm-12 col-md-12">
                                     <input type="text" class="form-control" placeholder="Gema Nummer"
                                         aria-label="Gema Nummer">
                                 </div>
@@ -531,6 +534,42 @@
             $("#wrapper").toggleClass("toggled");
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const inputs = document.querySelectorAll('.star');
+
+            // Function to add an asterisk to a placeholder
+            function addAsterisk(input) {
+                const placeholder = input.getAttribute('placeholder');
+                if (!placeholder.endsWith('*')) {
+                    input.setAttribute('placeholder', placeholder + ' *');
+                }
+            }
+
+            // Function to remove asterisk from placeholder
+            function removeAsterisk(input) {
+                const placeholder = input.getAttribute('placeholder');
+                input.setAttribute('placeholder', placeholder.replace(' *', ''));
+            }
+
+            // Call the function when the input gets focus
+            inputs.forEach(function (input) {
+                input.addEventListener('focus', function () {
+                    addAsterisk(input);
+                });
+            });
+
+            // Call function when input loses focus
+            inputs.forEach(function (input) {
+                input.addEventListener('blur', function () {
+                    removeAsterisk(input);
+                });
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
